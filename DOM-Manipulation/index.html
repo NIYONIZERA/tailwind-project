@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM tutorial</title>
+    <style>
+        .highlight{
+            color:green;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+   <h1 id="title">Hello World</h1>
+   <p class="text">First paragraph</p> 
+   <p class="text">Second paragraph</p>
+   <button id="clickMe">Click Me</button>
+
+   <!--Javascript will go here-->
+   <script>
+    const title=document.getElementById("title");
+    console.log(title);
+    const text1=document.getElementsByClassName("text");
+    console.log(text1.length)
+    const classText=document.querySelector(".text")
+    const allClassText=document.querySelectorAll(".text")
+    console.log(classText);
+    console.log(allClassText.length);
+    title.textContent="This is my new title";
+    classText.innerHTML="New paragraph";
+    title.style.color="red";
+    classText.style.backgroundColor="blue";
+    classText.style.color="white";
+    const clickMe=document.getElementById("clickMe");
+   </script>
+</body>
+</html>
